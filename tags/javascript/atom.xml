@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+	<title> - javascript</title>
+	<link href="https://natsuka-sili.github.io/tags/javascript/atom.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://natsuka-sili.github.io"/>
+	<generator uri="https://www.getzola.org/">Zola</generator>
+	<updated>2023-02-28T00:00:00+00:00</updated>
+	<id>https://natsuka-sili.github.io/tags/javascript/atom.xml</id>
+	<entry xml:lang="en">
+		<title>gpu.jsを使って電界シミュレータを作る</title>
+		<published>2023-02-28T00:00:00+00:00</published>
+		<updated>2023-02-28T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://natsuka-sili.github.io/post/t2-werve-gpujs/" type="text/html"/>
+		<id>https://natsuka-sili.github.io/post/t2-werve-gpujs/</id>
+		<content type="html">&lt;h1 id=&quot;xin-yi-qi&quot;&gt;心意気&lt;&#x2F;h1&gt;
+&lt;p&gt;研究室で以前つくられた電界シミュレータをweb上で実装し卒業研究にしようという心意気で作りました｡作っているうちに知ったのですが他の年度にも色々と試されていたようで陳腐な卒研となりましたが自己満足しているのも事実です｡&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;zuo-tutamono&quot;&gt;作ったもの&lt;&#x2F;h1&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;natsuka-sili.github.io&#x2F;werve-gpujs&#x2F;&quot;&gt;https:&#x2F;&#x2F;natsuka-sili.github.io&#x2F;werve-gpujs&#x2F;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;ji-neng&quot;&gt;機能&lt;&#x2F;h2&gt;
+&lt;p&gt;白い範囲をクリックすると赤い円と無数の矢印が見えるかと思います｡赤は正を円は電荷を示し赤い円は正電荷で矢印は電界です｡右下にchargeとあるスライダーを左に動かし白い範囲をクリックすると円の大きさが違う青い円が現れ動き出すかと思います｡青は負で大きさは電荷の大きさを示しており青い円は負電荷です｡精密なシミュレータではありませんが電荷や電界の動きは習ったそれと変わらないのではないでしょうか｡これが基本で8つあるスイッチは細かい設定の為にありますから簡単に紹介していきます｡&lt;&#x2F;p&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th style=&quot;text-align: right&quot;&gt;time&lt;&#x2F;th&gt;&lt;th&gt;:&lt;&#x2F;th&gt;&lt;th&gt;時間を再生&#x2F;停止します&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: right&quot;&gt;norm&lt;&#x2F;td&gt;&lt;td&gt;:&lt;&#x2F;td&gt;&lt;td&gt;電界の大きさを輝度で表します&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: right&quot;&gt;vector&lt;&#x2F;td&gt;&lt;td&gt;:&lt;&#x2F;td&gt;&lt;td&gt;電界のベクトルを矢印で表します&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: right&quot;&gt;install&lt;&#x2F;td&gt;&lt;td&gt;:&lt;&#x2F;td&gt;&lt;td&gt;クリックするとchargeに合う値の電荷を置きます&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: right&quot;&gt;delete&lt;&#x2F;td&gt;&lt;td&gt;:&lt;&#x2F;td&gt;&lt;td&gt;電荷をクリックすると消すことができます&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: right&quot;&gt;fix&lt;&#x2F;td&gt;&lt;td&gt;:&lt;&#x2F;td&gt;&lt;td&gt;電荷をクリックすると固定できます&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: right&quot;&gt;move&lt;&#x2F;td&gt;&lt;td&gt;:&lt;&#x2F;td&gt;&lt;td&gt;電荷をドラッグアンドドロップで移動させられます&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
+&lt;h2 id=&quot;sosukodo&quot;&gt;ソースコード&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;natsuka-sili&#x2F;werve-gpujs&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;natsuka-sili&#x2F;werve-gpujs&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;基本的に&lt;code&gt;src&lt;&#x2F;code&gt;内の&lt;code&gt;.js&lt;&#x2F;code&gt;ファイルを読んでもらえばシミュレーションについてわかるかと思います｡&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;chu-li&quot;&gt;処理&lt;&#x2F;h1&gt;
+&lt;ol&gt;
+&lt;li&gt;1つの電荷に対する電界の値を599×599で計算しテンプレートに格納する&lt;&#x2F;li&gt;
+&lt;li&gt;電荷の位置を元に電界のテンプレートを動かし配列300×300に格納する&lt;&#x2F;li&gt;
+&lt;li&gt;電荷の数だけ総和して配列300×300に格納していく&lt;&#x2F;li&gt;
+&lt;li&gt;電荷の座標に対応する電界配列の要素を電荷値と乗算してクーロン力を計算する&lt;&#x2F;li&gt;
+&lt;li&gt;クーロン力を元に位置と速度と加速度を計算する&lt;&#x2F;li&gt;
+&lt;li&gt;表示する&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;これの2.から6.を繰り返していると思ってください｡配列の大きさ300×300は色々と試して処理速度と分解能を設定したので最適とかではありません｡&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;gpu-js&quot;&gt;gpu.js&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gpu.rocks&#x2F;#&#x2F;&quot;&gt;gpu.js&lt;&#x2F;a&gt;は1.から3.及び6.で使っています｡&lt;code&gt;new GPU({ mode: &#x27;cpu&#x27; });&lt;&#x2F;code&gt;でgpuを使わない手法も取れると&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;gpujs&#x2F;gpu.js&quot;&gt;ドキュメント&lt;&#x2F;a&gt;には書いてあるのですが機能せずcpuとの比較が出来ていませんからgpuのありがたみも未知数となります｡&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;canvas&quot;&gt;canvas&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gpu.rocks&#x2F;#&#x2F;&quot;&gt;gpu.js&lt;&#x2F;a&gt;を6.で使っているのも事実なのですが半分くらいです｡normでの電界の輝度表示は&lt;a href=&quot;https:&#x2F;&#x2F;gpu.rocks&#x2F;#&#x2F;&quot;&gt;gpu.js&lt;&#x2F;a&gt;を用いているのですがvectorで使える電界のベクトル表示や電荷の円は&lt;a href=&quot;https:&#x2F;&#x2F;developer.mozilla.org&#x2F;ja&#x2F;docs&#x2F;Web&#x2F;JavaScript&quot;&gt;javascript&lt;&#x2F;a&gt;で描いています｡300×300でいくつも矢印を描くと見てられないので300×300で出た輝度表示は600×600に補間せず拡大しベクトル表示の方は600×600で出しています｡&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;dakumodo&quot;&gt;ダークモード&lt;&#x2F;h2&gt;
+&lt;p&gt;ちょうど流行りだったので作りました｡&lt;a href=&quot;https:&#x2F;&#x2F;gpu.rocks&#x2F;#&#x2F;&quot;&gt;gpu.js&lt;&#x2F;a&gt;の輝度表示は白黒反転させず表示のための配列への格納の時点で色を変えています｡&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;depuroi&quot;&gt;デプロイ&lt;&#x2F;h1&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;webpack.js.org&#x2F;&quot;&gt;webpack&lt;&#x2F;a&gt;を用いてローカルで生成したものを&lt;a href=&quot;https:&#x2F;&#x2F;docs.github.com&#x2F;ja&#x2F;pages&#x2F;getting-started-with-github-pages&#x2F;about-github-pages&quot;&gt;github pages&lt;&#x2F;a&gt;で&lt;code&gt;&#x2F;docs&lt;&#x2F;code&gt;のデプロイしています｡当初は&lt;a href=&quot;https:&#x2F;&#x2F;bitbucket.org&#x2F;&quot;&gt;bitbucket&lt;&#x2F;a&gt;を使っていたので&lt;a href=&quot;https:&#x2F;&#x2F;jp.heroku.com&#x2F;&quot;&gt;heroku&lt;&#x2F;a&gt;を使おうとしていたのですが何故かうまくいきませんでした｡最近の&lt;a href=&quot;https:&#x2F;&#x2F;jp.heroku.com&#x2F;&quot;&gt;heroku&lt;&#x2F;a&gt;を見ている感じ災い転じて福となすというやつですね｡&lt;&#x2F;p&gt;
+</content>
+	</entry>
+</feed>

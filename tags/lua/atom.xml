@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+	<title> - lua</title>
+	<link href="https://natsuka-sili.github.io/tags/lua/atom.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://natsuka-sili.github.io"/>
+	<generator uri="https://www.getzola.org/">Zola</generator>
+	<updated>2023-03-04T00:00:00+00:00</updated>
+	<id>https://natsuka-sili.github.io/tags/lua/atom.xml</id>
+	<entry xml:lang="en">
+		<title>lualatexのluaの部分</title>
+		<published>2023-03-04T00:00:00+00:00</published>
+		<updated>2023-03-04T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://natsuka-sili.github.io/post/t4-marindeck/" type="text/html"/>
+		<id>https://natsuka-sili.github.io/post/t4-marindeck/</id>
+		<content type="html">&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;natsuka-sili&#x2F;lualatex-scripting&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;natsuka-sili&#x2F;lualatex-scripting&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;platexが悪く話題になった頃に触った&lt;a href=&quot;http:&#x2F;&#x2F;www.luatex.org&quot;&gt;lualatex&lt;&#x2F;a&gt;ですが&lt;a href=&quot;https:&#x2F;&#x2F;www.lua.org&quot;&gt;lua&lt;&#x2F;a&gt;が使える以外は特筆するような違いが無かったので&lt;a href=&quot;https:&#x2F;&#x2F;www.lua.org&quot;&gt;lua&lt;&#x2F;a&gt;の使い道を考えた時のコードです｡&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;huibonatutishu-nogurahubiao-shi&quot;&gt;フィボナッチ数のグラフ表示&lt;&#x2F;h1&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;natsuka-sili&#x2F;lualatex-scripting&#x2F;blob&#x2F;main&#x2F;fibonacci_graph.pdf&quot;&gt;表示&lt;&#x2F;a&gt;と&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;natsuka-sili&#x2F;lualatex-scripting&#x2F;blob&#x2F;main&#x2F;fibonacci_graph.tex&quot;&gt;コード&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;tikzpictureの形式で座標の文字列を出力する為に&lt;a href=&quot;https:&#x2F;&#x2F;www.lua.org&quot;&gt;lua&lt;&#x2F;a&gt;を使っていますね｡これが出来ることからわかると思いますが大抵の事は出来ます｡出来ますが別に利点は大きくないかと思います｡&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;huibonatutishu-noyi-lan-biao-shi&quot;&gt;フィボナッチ数の一覧表示&lt;&#x2F;h1&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;natsuka-sili&#x2F;lualatex-scripting&#x2F;blob&#x2F;main&#x2F;fibonacci_numerical.pdf&quot;&gt;表示&lt;&#x2F;a&gt;と&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;natsuka-sili&#x2F;lualatex-scripting&#x2F;blob&#x2F;main&#x2F;fibonacci_numerical.tex&quot;&gt;コード&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;形式とか考えずにただただ出力しています｡何も考えずに書けます｡わざわざgccとかをいれずにフィボナッチ数がわかるのは良い｡&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;san-jiao-guan-shu-biao-nozuo-cheng&quot;&gt;三角関数表の作成&lt;&#x2F;h1&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;natsuka-sili&#x2F;lualatex-scripting&#x2F;blob&#x2F;main&#x2F;sin_table.pdf&quot;&gt;表示&lt;&#x2F;a&gt;と&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;natsuka-sili&#x2F;lualatex-scripting&#x2F;blob&#x2F;main&#x2F;sin_table.tex&quot;&gt;コード&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;表の形式で文字列を出力すれば良いですね｡数学のプリントの最後に三角関数表を付ける先生がいると思いますが&lt;a href=&quot;https:&#x2F;&#x2F;www.lua.org&quot;&gt;lua&lt;&#x2F;a&gt;で作ることで雑談のネタにはなります｡&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;ta&quot;&gt;他&lt;&#x2F;h1&gt;
+&lt;p&gt;鉄緑の人って&lt;a href=&quot;http:&#x2F;&#x2F;www.luatex.org&quot;&gt;lualatex&lt;&#x2F;a&gt;触ってるのかなと気になり数年ぶりに&lt;a href=&quot;https:&#x2F;&#x2F;doratex.hatenablog.jp&quot;&gt;ブログ&lt;&#x2F;a&gt;を見に行ったらしっかりと触っていたしブログも定期的に書いていて感心してしまいました｡昔っから意味の分からない活用法を編み出している印象｡&lt;&#x2F;p&gt;
+</content>
+	</entry>
+</feed>

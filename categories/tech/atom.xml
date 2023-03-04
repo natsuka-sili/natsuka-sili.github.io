@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+	<title> - tech</title>
+	<link href="https://natsuka-sili.github.io/categories/tech/atom.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://natsuka-sili.github.io"/>
+	<generator uri="https://www.getzola.org/">Zola</generator>
+	<updated>2023-03-04T00:00:00+00:00</updated>
+	<id>https://natsuka-sili.github.io/categories/tech/atom.xml</id>
+	<entry xml:lang="en">
+		<title>lualatexのluaの部分</title>
+		<published>2023-03-04T00:00:00+00:00</published>
+		<updated>2023-03-04T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://natsuka-sili.github.io/post/t4-marindeck/" type="text/html"/>
+		<id>https://natsuka-sili.github.io/post/t4-marindeck/</id>
+		<content type="html">&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;natsuka-sili&#x2F;lualatex-scripting&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;natsuka-sili&#x2F;lualatex-scripting&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;platexが悪く話題になった頃に触った&lt;a href=&quot;http:&#x2F;&#x2F;www.luatex.org&quot;&gt;lualatex&lt;&#x2F;a&gt;ですが&lt;a href=&quot;https:&#x2F;&#x2F;www.lua.org&quot;&gt;lua&lt;&#x2F;a&gt;が使える以外は特筆するような違いが無かったので&lt;a href=&quot;https:&#x2F;&#x2F;www.lua.org&quot;&gt;lua&lt;&#x2F;a&gt;の使い道を考えた時のコードです｡&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;huibonatutishu-nogurahubiao-shi&quot;&gt;フィボナッチ数のグラフ表示&lt;&#x2F;h1&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;natsuka-sili&#x2F;lualatex-scripting&#x2F;blob&#x2F;main&#x2F;fibonacci_graph.pdf&quot;&gt;表示&lt;&#x2F;a&gt;と&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;natsuka-sili&#x2F;lualatex-scripting&#x2F;blob&#x2F;main&#x2F;fibonacci_graph.tex&quot;&gt;コード&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;tikzpictureの形式で座標の文字列を出力する為に&lt;a href=&quot;https:&#x2F;&#x2F;www.lua.org&quot;&gt;lua&lt;&#x2F;a&gt;を使っていますね｡これが出来ることからわかると思いますが大抵の事は出来ます｡出来ますが別に利点は大きくないかと思います｡&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;huibonatutishu-noyi-lan-biao-shi&quot;&gt;フィボナッチ数の一覧表示&lt;&#x2F;h1&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;natsuka-sili&#x2F;lualatex-scripting&#x2F;blob&#x2F;main&#x2F;fibonacci_numerical.pdf&quot;&gt;表示&lt;&#x2F;a&gt;と&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;natsuka-sili&#x2F;lualatex-scripting&#x2F;blob&#x2F;main&#x2F;fibonacci_numerical.tex&quot;&gt;コード&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;形式とか考えずにただただ出力しています｡何も考えずに書けます｡わざわざgccとかをいれずにフィボナッチ数がわかるのは良い｡&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;san-jiao-guan-shu-biao-nozuo-cheng&quot;&gt;三角関数表の作成&lt;&#x2F;h1&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;natsuka-sili&#x2F;lualatex-scripting&#x2F;blob&#x2F;main&#x2F;sin_table.pdf&quot;&gt;表示&lt;&#x2F;a&gt;と&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;natsuka-sili&#x2F;lualatex-scripting&#x2F;blob&#x2F;main&#x2F;sin_table.tex&quot;&gt;コード&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;表の形式で文字列を出力すれば良いですね｡数学のプリントの最後に三角関数表を付ける先生がいると思いますが&lt;a href=&quot;https:&#x2F;&#x2F;www.lua.org&quot;&gt;lua&lt;&#x2F;a&gt;で作ることで雑談のネタにはなります｡&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;ta&quot;&gt;他&lt;&#x2F;h1&gt;
+&lt;p&gt;鉄緑の人って&lt;a href=&quot;http:&#x2F;&#x2F;www.luatex.org&quot;&gt;lualatex&lt;&#x2F;a&gt;触ってるのかなと気になり数年ぶりに&lt;a href=&quot;https:&#x2F;&#x2F;doratex.hatenablog.jp&quot;&gt;ブログ&lt;&#x2F;a&gt;を見に行ったらしっかりと触っていたしブログも定期的に書いていて感心してしまいました｡昔っから意味の分からない活用法を編み出している印象｡&lt;&#x2F;p&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>電界シミュレータをrust→wasmで改める</title>
+		<published>2023-03-02T00:00:00+00:00</published>
+		<updated>2023-03-02T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://natsuka-sili.github.io/post/t3-werve-rust/" type="text/html"/>
+		<id>https://natsuka-sili.github.io/post/t3-werve-rust/</id>
+		<content type="html">&lt;h1 id=&quot;xin-yi-qi&quot;&gt;心意気&lt;&#x2F;h1&gt;
+&lt;p&gt;卒業研究として&lt;a href=&quot;..&#x2F;post&#x2F;t2-werve-gpujs&quot;&gt;gpu.jsで電界シミュレータを作っている&lt;&#x2F;a&gt;間に&lt;a href=&quot;https:&#x2F;&#x2F;webassembly.org&quot;&gt;webassembly&lt;&#x2F;a&gt;というものを知ってしまいそれ以降はやる気が低下しきりながらもなんとか&lt;a href=&quot;https:&#x2F;&#x2F;gpu.rocks&#x2F;#&#x2F;&quot;&gt;gpu.js&lt;&#x2F;a&gt;で作り終わり時間も手に入れたのでいよいよ&lt;a href=&quot;https:&#x2F;&#x2F;webassembly.org&quot;&gt;webassembly&lt;&#x2F;a&gt;で作り始めました｡&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;zuo-tutamono&quot;&gt;作ったもの&lt;&#x2F;h1&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;natsuka-sili.github.io&#x2F;werve-wasm&#x2F;&quot;&gt;https:&#x2F;&#x2F;natsuka-sili.github.io&#x2F;werve-wasm&#x2F;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;ji-neng&quot;&gt;機能&lt;&#x2F;h2&gt;
+&lt;p&gt;黒い範囲をクリックすると白いぼやけた円が表示されるかと思います｡これはスライダーに応じたcharge valueの左ある数字の大きさに対応した電荷です｡このように電荷をいくつか置き輝度で電界を見て楽しめます｡また上にあるスイッチの説明を以下に示します｡&lt;&#x2F;p&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th style=&quot;text-align: right&quot;&gt;install&lt;&#x2F;th&gt;&lt;th&gt;:&lt;&#x2F;th&gt;&lt;th&gt;クリックするとchargeに合う値の電荷を置きます&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: right&quot;&gt;remove&lt;&#x2F;td&gt;&lt;td&gt;:&lt;&#x2F;td&gt;&lt;td&gt;電荷をクリックすると消すことができます&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: right&quot;&gt;control&lt;&#x2F;td&gt;&lt;td&gt;:&lt;&#x2F;td&gt;&lt;td&gt;電荷をドラッグアンドドロップで移動させられます&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: right&quot;&gt;fix&lt;&#x2F;td&gt;&lt;td&gt;:&lt;&#x2F;td&gt;&lt;td&gt;電荷をクリックすると固定できます&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
+&lt;h2 id=&quot;sosukodo&quot;&gt;ソースコード&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;natsuka-sili&#x2F;werve-wasm&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;natsuka-sili&#x2F;werve-wasm&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;基本的に&lt;code&gt;src&lt;&#x2F;code&gt;内の&lt;code&gt;.rs&lt;&#x2F;code&gt;ファイルを読んでもらえばシミュレーションについてわかるかと思います｡&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;chu-li&quot;&gt;処理&lt;&#x2F;h1&gt;
+&lt;ol&gt;
+&lt;li&gt;1つの電荷に対する電界の値を1539×1539で計算しテンプレートに格納する&lt;&#x2F;li&gt;
+&lt;li&gt;電荷の位置を元に電界のテンプレートを動かし配列769×769に格納する&lt;&#x2F;li&gt;
+&lt;li&gt;電荷の数だけ総和して配列769×769に格納していく&lt;&#x2F;li&gt;
+&lt;li&gt;電荷の座標に対応する電界配列の要素を電荷値と乗算してクーロン力を計算する&lt;&#x2F;li&gt;
+&lt;li&gt;クーロン力を元に位置と速度と加速度を計算する&lt;&#x2F;li&gt;
+&lt;li&gt;表示する&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;これの2.から6.を繰り返していると思ってください｡配列の大きさ769×769の理由はよく覚えていないのですが奇数の方が都合が良いというのは確かです｡&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;rust-wasm&quot;&gt;rust→wasm&lt;&#x2F;h2&gt;
+&lt;p&gt;入力と表示以外の全てを&lt;a href=&quot;https:&#x2F;&#x2F;www.rust-lang.org&#x2F;ja&quot;&gt;rust&lt;&#x2F;a&gt;から変換した&lt;a href=&quot;https:&#x2F;&#x2F;webassembly.org&quot;&gt;wasm&lt;&#x2F;a&gt;で実行しています｡&lt;a href=&quot;https:&#x2F;&#x2F;wgpu.rs&quot;&gt;wgpu&lt;&#x2F;a&gt;や&lt;a href=&quot;https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webgpu&#x2F;&quot;&gt;webgpu&lt;&#x2F;a&gt;は仕様が変わり続けているので使っていません｡表示に適すような配列への変換もこっちで行っています｡&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;canvas&quot;&gt;canvas&lt;&#x2F;h2&gt;
+&lt;p&gt;上述にある表示に適すような配列を共有メモリーから表示しています｡&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;natsuka-sili&#x2F;werve-gpujs&quot;&gt;gpu.js版&lt;&#x2F;a&gt;にあったベクトル表示を未だに作っていないためcanvasは1枚のみでの実装です｡&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;css&quot;&gt;css&lt;&#x2F;h2&gt;
+&lt;p&gt;何も無いのでスマートフォンから使おうとすると電荷を動かす時にスクロールされるなど使いにくいと思います｡pc(2060)では&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;natsuka-sili&#x2F;werve-wasm&quot;&gt;wasm版&lt;&#x2F;a&gt;の方がフレームレートが出たのですがスマートフォン(iphone8)では&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;natsuka-sili&#x2F;werve-gpujs&quot;&gt;gpu.js版&lt;&#x2F;a&gt;の方が出たのでcssを作る気が消えたと記憶しています｡しかしiphone11で試したところ&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;natsuka-sili&#x2F;werve-wasm&quot;&gt;wasm版&lt;&#x2F;a&gt;もかなり良く動いたのでやる気によってはcssやベクトル表示機能を作ると思います｡&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;depuroi&quot;&gt;デプロイ&lt;&#x2F;h1&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;webpack.js.org&#x2F;&quot;&gt;webpack&lt;&#x2F;a&gt;を用いてローカルで生成したものを&lt;a href=&quot;https:&#x2F;&#x2F;docs.github.com&#x2F;ja&#x2F;pages&#x2F;getting-started-with-github-pages&#x2F;about-github-pages&quot;&gt;github pages&lt;&#x2F;a&gt;で&lt;code&gt;&#x2F;docs&lt;&#x2F;code&gt;のデプロイしています｡&lt;&#x2F;p&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>gpu.jsを使って電界シミュレータを作る</title>
+		<published>2023-02-28T00:00:00+00:00</published>
+		<updated>2023-02-28T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://natsuka-sili.github.io/post/t2-werve-gpujs/" type="text/html"/>
+		<id>https://natsuka-sili.github.io/post/t2-werve-gpujs/</id>
+		<content type="html">&lt;h1 id=&quot;xin-yi-qi&quot;&gt;心意気&lt;&#x2F;h1&gt;
+&lt;p&gt;研究室で以前つくられた電界シミュレータをweb上で実装し卒業研究にしようという心意気で作りました｡作っているうちに知ったのですが他の年度にも色々と試されていたようで陳腐な卒研となりましたが自己満足しているのも事実です｡&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;zuo-tutamono&quot;&gt;作ったもの&lt;&#x2F;h1&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;natsuka-sili.github.io&#x2F;werve-gpujs&#x2F;&quot;&gt;https:&#x2F;&#x2F;natsuka-sili.github.io&#x2F;werve-gpujs&#x2F;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;ji-neng&quot;&gt;機能&lt;&#x2F;h2&gt;
+&lt;p&gt;白い範囲をクリックすると赤い円と無数の矢印が見えるかと思います｡赤は正を円は電荷を示し赤い円は正電荷で矢印は電界です｡右下にchargeとあるスライダーを左に動かし白い範囲をクリックすると円の大きさが違う青い円が現れ動き出すかと思います｡青は負で大きさは電荷の大きさを示しており青い円は負電荷です｡精密なシミュレータではありませんが電荷や電界の動きは習ったそれと変わらないのではないでしょうか｡これが基本で8つあるスイッチは細かい設定の為にありますから簡単に紹介していきます｡&lt;&#x2F;p&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th style=&quot;text-align: right&quot;&gt;time&lt;&#x2F;th&gt;&lt;th&gt;:&lt;&#x2F;th&gt;&lt;th&gt;時間を再生&#x2F;停止します&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: right&quot;&gt;norm&lt;&#x2F;td&gt;&lt;td&gt;:&lt;&#x2F;td&gt;&lt;td&gt;電界の大きさを輝度で表します&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: right&quot;&gt;vector&lt;&#x2F;td&gt;&lt;td&gt;:&lt;&#x2F;td&gt;&lt;td&gt;電界のベクトルを矢印で表します&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: right&quot;&gt;install&lt;&#x2F;td&gt;&lt;td&gt;:&lt;&#x2F;td&gt;&lt;td&gt;クリックするとchargeに合う値の電荷を置きます&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: right&quot;&gt;delete&lt;&#x2F;td&gt;&lt;td&gt;:&lt;&#x2F;td&gt;&lt;td&gt;電荷をクリックすると消すことができます&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: right&quot;&gt;fix&lt;&#x2F;td&gt;&lt;td&gt;:&lt;&#x2F;td&gt;&lt;td&gt;電荷をクリックすると固定できます&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: right&quot;&gt;move&lt;&#x2F;td&gt;&lt;td&gt;:&lt;&#x2F;td&gt;&lt;td&gt;電荷をドラッグアンドドロップで移動させられます&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
+&lt;h2 id=&quot;sosukodo&quot;&gt;ソースコード&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;natsuka-sili&#x2F;werve-gpujs&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;natsuka-sili&#x2F;werve-gpujs&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;基本的に&lt;code&gt;src&lt;&#x2F;code&gt;内の&lt;code&gt;.js&lt;&#x2F;code&gt;ファイルを読んでもらえばシミュレーションについてわかるかと思います｡&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;chu-li&quot;&gt;処理&lt;&#x2F;h1&gt;
+&lt;ol&gt;
+&lt;li&gt;1つの電荷に対する電界の値を599×599で計算しテンプレートに格納する&lt;&#x2F;li&gt;
+&lt;li&gt;電荷の位置を元に電界のテンプレートを動かし配列300×300に格納する&lt;&#x2F;li&gt;
+&lt;li&gt;電荷の数だけ総和して配列300×300に格納していく&lt;&#x2F;li&gt;
+&lt;li&gt;電荷の座標に対応する電界配列の要素を電荷値と乗算してクーロン力を計算する&lt;&#x2F;li&gt;
+&lt;li&gt;クーロン力を元に位置と速度と加速度を計算する&lt;&#x2F;li&gt;
+&lt;li&gt;表示する&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;これの2.から6.を繰り返していると思ってください｡配列の大きさ300×300は色々と試して処理速度と分解能を設定したので最適とかではありません｡&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;gpu-js&quot;&gt;gpu.js&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gpu.rocks&#x2F;#&#x2F;&quot;&gt;gpu.js&lt;&#x2F;a&gt;は1.から3.及び6.で使っています｡&lt;code&gt;new GPU({ mode: &#x27;cpu&#x27; });&lt;&#x2F;code&gt;でgpuを使わない手法も取れると&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;gpujs&#x2F;gpu.js&quot;&gt;ドキュメント&lt;&#x2F;a&gt;には書いてあるのですが機能せずcpuとの比較が出来ていませんからgpuのありがたみも未知数となります｡&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;canvas&quot;&gt;canvas&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gpu.rocks&#x2F;#&#x2F;&quot;&gt;gpu.js&lt;&#x2F;a&gt;を6.で使っているのも事実なのですが半分くらいです｡normでの電界の輝度表示は&lt;a href=&quot;https:&#x2F;&#x2F;gpu.rocks&#x2F;#&#x2F;&quot;&gt;gpu.js&lt;&#x2F;a&gt;を用いているのですがvectorで使える電界のベクトル表示や電荷の円は&lt;a href=&quot;https:&#x2F;&#x2F;developer.mozilla.org&#x2F;ja&#x2F;docs&#x2F;Web&#x2F;JavaScript&quot;&gt;javascript&lt;&#x2F;a&gt;で描いています｡300×300でいくつも矢印を描くと見てられないので300×300で出た輝度表示は600×600に補間せず拡大しベクトル表示の方は600×600で出しています｡&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;dakumodo&quot;&gt;ダークモード&lt;&#x2F;h2&gt;
+&lt;p&gt;ちょうど流行りだったので作りました｡&lt;a href=&quot;https:&#x2F;&#x2F;gpu.rocks&#x2F;#&#x2F;&quot;&gt;gpu.js&lt;&#x2F;a&gt;の輝度表示は白黒反転させず表示のための配列への格納の時点で色を変えています｡&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;depuroi&quot;&gt;デプロイ&lt;&#x2F;h1&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;webpack.js.org&#x2F;&quot;&gt;webpack&lt;&#x2F;a&gt;を用いてローカルで生成したものを&lt;a href=&quot;https:&#x2F;&#x2F;docs.github.com&#x2F;ja&#x2F;pages&#x2F;getting-started-with-github-pages&#x2F;about-github-pages&quot;&gt;github pages&lt;&#x2F;a&gt;で&lt;code&gt;&#x2F;docs&lt;&#x2F;code&gt;のデプロイしています｡当初は&lt;a href=&quot;https:&#x2F;&#x2F;bitbucket.org&#x2F;&quot;&gt;bitbucket&lt;&#x2F;a&gt;を使っていたので&lt;a href=&quot;https:&#x2F;&#x2F;jp.heroku.com&#x2F;&quot;&gt;heroku&lt;&#x2F;a&gt;を使おうとしていたのですが何故かうまくいきませんでした｡最近の&lt;a href=&quot;https:&#x2F;&#x2F;jp.heroku.com&#x2F;&quot;&gt;heroku&lt;&#x2F;a&gt;を見ている感じ災い転じて福となすというやつですね｡&lt;&#x2F;p&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>zolaで作ったブログをgithub pagesに公開</title>
+		<published>2023-02-27T00:00:00+00:00</published>
+		<updated>2023-02-27T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://natsuka-sili.github.io/post/t1-make-blog/" type="text/html"/>
+		<id>https://natsuka-sili.github.io/post/t1-make-blog/</id>
+		<content type="html">&lt;h1 id=&quot;zola&quot;&gt;zola&lt;&#x2F;h1&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Static_site_generator&quot;&gt;ssg&lt;&#x2F;a&gt;の一種で&lt;a href=&quot;https:&#x2F;&#x2F;gohugo.io&#x2F;&quot;&gt;hugo&lt;&#x2F;a&gt;みたいなものだと思ってください｡&lt;a href=&quot;https:&#x2F;&#x2F;www.rust-lang.org&#x2F;ja&quot;&gt;rust&lt;&#x2F;a&gt;で書かれていますが別に&lt;a href=&quot;https:&#x2F;&#x2F;www.rust-lang.org&#x2F;ja&quot;&gt;rust&lt;&#x2F;a&gt;の知識は必要ありません｡&lt;a href=&quot;https:&#x2F;&#x2F;tera.netlify.app&quot;&gt;tera&lt;&#x2F;a&gt;という&lt;a href=&quot;https:&#x2F;&#x2F;www.rust-lang.org&#x2F;ja&quot;&gt;rust&lt;&#x2F;a&gt;で書かれたテンプレートエンジンを使うのですが何となくで書けるので知識は不必要かと思います｡&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;buroguwozuo-ru&quot;&gt;ブログを作る&lt;&#x2F;h1&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;&quot;&gt;zolaの公式サイト&lt;&#x2F;a&gt;を見ていけば最低限のブログは作れます｡わからないところは&lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;themes&#x2F;&quot;&gt;テーマ&lt;&#x2F;a&gt;に色々な方の作ったサイトが載っていますのでそれを参考にしましょう｡&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;taxonomies&quot;&gt;taxonomies&lt;&#x2F;h2&gt;
+&lt;p&gt;恐らく問題になるのは&lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;taxonomies&#x2F;&quot;&gt;taxonomies&lt;&#x2F;a&gt;の実装かと思います｡テーマにあるサイトはタグやカテゴリの一覧が単独のページになっていることが多く他の方法を取ろうとするとコピペでは成り立ちません｡&lt;&#x2F;p&gt;
+&lt;p&gt;私の目標としては&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;テーマの一覧をトップページに載せる&lt;&#x2F;li&gt;
+&lt;li&gt;トップページで投稿を2つのカテゴリに分ける&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;だったので仕方なく&lt;a href=&quot;https:&#x2F;&#x2F;tera.netlify.app&quot;&gt;tera&lt;&#x2F;a&gt;について調べたり色々試してなんとか実装しました｡詳しくは&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;natsuka-sili&#x2F;natsuka-sili.github.io&quot;&gt;githubの方&lt;&#x2F;a&gt;を見てほしいのですが詰まったところを書いておくと&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;natsuka-sili&#x2F;natsuka-sili.github.io&#x2F;blob&#x2F;main&#x2F;templates&#x2F;index.html#L4&quot;&gt;index.htmlの4行目&lt;&#x2F;a&gt;です｡&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;kategorifen-kedeshi-uifwen&quot;&gt;カテゴリ分けで使うif文&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;code&gt;{% if page.taxonomies.categories == &amp;quot;tech&amp;quot; %}&lt;&#x2F;code&gt;と書いて失敗し続けて泣いていましたが&lt;a href=&quot;https:&#x2F;&#x2F;chat.openai.com&#x2F;chat&quot;&gt;chatgpt&lt;&#x2F;a&gt;に聞いたところ&lt;code&gt;{% if &amp;quot;tech&amp;quot; in page.taxonomies.categories %}&lt;&#x2F;code&gt;だよと優しく教えてくれて事なきを得ました｡&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;pasunozhi-ding&quot;&gt;パスの指定&lt;&#x2F;h2&gt;
+&lt;p&gt;私は&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;natsuka-sili&#x2F;natsuka-sili.github.io&#x2F;blob&#x2F;main&#x2F;templates&#x2F;tags&#x2F;single.html#L10&quot;&gt;&lt;code&gt;..&#x2F;{{ term | safe }}&lt;&#x2F;code&gt;のような褒められたものではない指定をしている&lt;&#x2F;a&gt;のですが恐らく良くないので適当に良い方法を見繕ってください｡そして教えてください｡&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;css&quot;&gt;css&lt;&#x2F;h2&gt;
+&lt;p&gt;色を変数にしたかったのでsassにしましたが普通に作る分にはcssで良いと思います｡markdownをhtmlに変換したものが記事になるので&lt;code&gt;# h1&lt;&#x2F;code&gt;や&lt;code&gt;[リンク名](url)&lt;&#x2F;code&gt;を良い感じにcssで整える必要があります｡個人的には使う機能を予想して一気に作るよりは適宜作っていくほうが良いと感じています｡&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;depuroi&quot;&gt;デプロイ&lt;&#x2F;h1&gt;
+&lt;p&gt;今回は&lt;a href=&quot;https:&#x2F;&#x2F;docs.github.com&#x2F;ja&#x2F;pages&#x2F;getting-started-with-github-pages&#x2F;about-github-pages&quot;&gt;github pages&lt;&#x2F;a&gt;を使いました｡基本は&lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;deployment&#x2F;github-pages&#x2F;&quot;&gt;公式ドキュメント&lt;&#x2F;a&gt;に沿えば良いのですが知識不足と英語の苦手が故にまごついた部分があったのでメモしておくと&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;user icon&amp;gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;settings&#x2F;profile&quot;&gt;Settings&lt;&#x2F;a&gt;&amp;gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;settings&#x2F;apps&quot;&gt;Developer setting&lt;&#x2F;a&gt;&amp;gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;settings&#x2F;tokens&quot;&gt;Personal access tokens (classic)&lt;&#x2F;a&gt;にて Generate new token(classic) を行い public_repo のみに印を付け発行されたtokenをコピーする&lt;&#x2F;li&gt;
+&lt;li&gt;repositry&amp;gt;Settings&amp;gt;Secrets&amp;gt;ActionsにてNameにTOKENと書きSecretには先程コピーしたtokenをペーストする&lt;&#x2F;li&gt;
+&lt;li&gt;&#x2F;config.tomlをbase_url=&amp;quot;https:&#x2F;&#x2F;&#x27;user_name&#x27;.github.io&#x2F;&#x27;repository_name&#x27;&amp;quot;と書き換える&lt;&#x2F;li&gt;
+&lt;li&gt;git pushした後でrepositry&amp;gt;Settings&amp;gt;Pages&amp;gt;SourceがDeploy from a branchでありrepositry&amp;gt;Settings&amp;gt;Pages&amp;gt;Branchがgh-pages &#x2F;(root)になっている事を確認する&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;このような具合です｡&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;suo-gan&quot;&gt;所感&lt;&#x2F;h1&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;themes&#x2F;&quot;&gt;テーマ&lt;&#x2F;a&gt;が少ないのが&lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;&quot;&gt;zola&lt;&#x2F;a&gt;の最大の問題で次点で日本語の情報がほぼありません｡調べていないのでわかりませんが&lt;a href=&quot;https:&#x2F;&#x2F;gohugo.io&#x2F;&quot;&gt;hugo&lt;&#x2F;a&gt;なら自分で作らなくともタグ一覧を表示しカテゴリ分けが出来たのではないかなと思っています｡なので一切おすすめしません｡&lt;a href=&quot;https:&#x2F;&#x2F;www.rust-lang.org&#x2F;ja&quot;&gt;rust&lt;&#x2F;a&gt;だから早いとか言われていますが記事数が200程度なら変わらないと思います｡それでも&lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;&quot;&gt;zola&lt;&#x2F;a&gt;が使いたいなら&lt;a href=&quot;https:&#x2F;&#x2F;chat.openai.com&#x2F;chat&quot;&gt;chatgpt&lt;&#x2F;a&gt;の手を借りると良いと思います｡英語サイトの情報も内包していて適当な日本語で返してくれるので大体は解決します｡最新情報はbingのaiの方が良いのでしょうが適当なサイトから拾ってしまうために情報の質は&lt;a href=&quot;https:&#x2F;&#x2F;chat.openai.com&#x2F;chat&quot;&gt;chatgpt&lt;&#x2F;a&gt;の方が良い傾向にあると感じています｡&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;can-kao&quot;&gt;参考&lt;&#x2F;h1&gt;
+&lt;ul&gt;
+&lt;li&gt;zolaの書き方を知るために参照&lt;br &#x2F;&gt;
+&lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&quot;&gt;https:&#x2F;&#x2F;www.getzola.org&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;カテゴリのif文を教えてもらった&lt;br &#x2F;&gt;
+&lt;a href=&quot;https:&#x2F;&#x2F;chat.openai.com&#x2F;chat&quot;&gt;https:&#x2F;&#x2F;chat.openai.com&#x2F;chat&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;ブログデザインを参照&lt;br &#x2F;&gt;
+&lt;a href=&quot;http:&#x2F;&#x2F;saqum.com&#x2F;index.html&quot;&gt;http:&#x2F;&#x2F;saqum.com&#x2F;index.html&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;配色の参考&lt;br &#x2F;&gt;
+&lt;a href=&quot;https:&#x2F;&#x2F;pigment.shapefactory.co&#x2F;&quot;&gt;https:&#x2F;&#x2F;pigment.shapefactory.co&#x2F;&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;タグマークの作成に参照&lt;br &#x2F;&gt;
+&lt;a href=&quot;https:&#x2F;&#x2F;qiita.com&#x2F;yuneco&#x2F;items&#x2F;444abd3f40d53ce7d078&quot;&gt;https:&#x2F;&#x2F;qiita.com&#x2F;yuneco&#x2F;items&#x2F;444abd3f40d53ce7d078&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+	</entry>
+</feed>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+	<title> - zola</title>
+	<link href="https://natsuka-sili.github.io/tags/zola/atom.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://natsuka-sili.github.io"/>
+	<generator uri="https://www.getzola.org/">Zola</generator>
+	<updated>2023-02-27T00:00:00+00:00</updated>
+	<id>https://natsuka-sili.github.io/tags/zola/atom.xml</id>
+	<entry xml:lang="en">
+		<title>zolaで作ったブログをgithub pagesに公開</title>
+		<published>2023-02-27T00:00:00+00:00</published>
+		<updated>2023-02-27T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://natsuka-sili.github.io/post/t1-make-blog/" type="text/html"/>
+		<id>https://natsuka-sili.github.io/post/t1-make-blog/</id>
+		<content type="html">&lt;h1 id=&quot;zola&quot;&gt;zola&lt;&#x2F;h1&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Static_site_generator&quot;&gt;ssg&lt;&#x2F;a&gt;の一種で&lt;a href=&quot;https:&#x2F;&#x2F;gohugo.io&#x2F;&quot;&gt;hugo&lt;&#x2F;a&gt;みたいなものだと思ってください｡&lt;a href=&quot;https:&#x2F;&#x2F;www.rust-lang.org&#x2F;ja&quot;&gt;rust&lt;&#x2F;a&gt;で書かれていますが別に&lt;a href=&quot;https:&#x2F;&#x2F;www.rust-lang.org&#x2F;ja&quot;&gt;rust&lt;&#x2F;a&gt;の知識は必要ありません｡&lt;a href=&quot;https:&#x2F;&#x2F;tera.netlify.app&quot;&gt;tera&lt;&#x2F;a&gt;という&lt;a href=&quot;https:&#x2F;&#x2F;www.rust-lang.org&#x2F;ja&quot;&gt;rust&lt;&#x2F;a&gt;で書かれたテンプレートエンジンを使うのですが何となくで書けるので知識は不必要かと思います｡&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;buroguwozuo-ru&quot;&gt;ブログを作る&lt;&#x2F;h1&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;&quot;&gt;zolaの公式サイト&lt;&#x2F;a&gt;を見ていけば最低限のブログは作れます｡わからないところは&lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;themes&#x2F;&quot;&gt;テーマ&lt;&#x2F;a&gt;に色々な方の作ったサイトが載っていますのでそれを参考にしましょう｡&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;taxonomies&quot;&gt;taxonomies&lt;&#x2F;h2&gt;
+&lt;p&gt;恐らく問題になるのは&lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;taxonomies&#x2F;&quot;&gt;taxonomies&lt;&#x2F;a&gt;の実装かと思います｡テーマにあるサイトはタグやカテゴリの一覧が単独のページになっていることが多く他の方法を取ろうとするとコピペでは成り立ちません｡&lt;&#x2F;p&gt;
+&lt;p&gt;私の目標としては&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;テーマの一覧をトップページに載せる&lt;&#x2F;li&gt;
+&lt;li&gt;トップページで投稿を2つのカテゴリに分ける&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;だったので仕方なく&lt;a href=&quot;https:&#x2F;&#x2F;tera.netlify.app&quot;&gt;tera&lt;&#x2F;a&gt;について調べたり色々試してなんとか実装しました｡詳しくは&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;natsuka-sili&#x2F;natsuka-sili.github.io&quot;&gt;githubの方&lt;&#x2F;a&gt;を見てほしいのですが詰まったところを書いておくと&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;natsuka-sili&#x2F;natsuka-sili.github.io&#x2F;blob&#x2F;main&#x2F;templates&#x2F;index.html#L4&quot;&gt;index.htmlの4行目&lt;&#x2F;a&gt;です｡&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;kategorifen-kedeshi-uifwen&quot;&gt;カテゴリ分けで使うif文&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;code&gt;{% if page.taxonomies.categories == &amp;quot;tech&amp;quot; %}&lt;&#x2F;code&gt;と書いて失敗し続けて泣いていましたが&lt;a href=&quot;https:&#x2F;&#x2F;chat.openai.com&#x2F;chat&quot;&gt;chatgpt&lt;&#x2F;a&gt;に聞いたところ&lt;code&gt;{% if &amp;quot;tech&amp;quot; in page.taxonomies.categories %}&lt;&#x2F;code&gt;だよと優しく教えてくれて事なきを得ました｡&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;pasunozhi-ding&quot;&gt;パスの指定&lt;&#x2F;h2&gt;
+&lt;p&gt;私は&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;natsuka-sili&#x2F;natsuka-sili.github.io&#x2F;blob&#x2F;main&#x2F;templates&#x2F;tags&#x2F;single.html#L10&quot;&gt;&lt;code&gt;..&#x2F;{{ term | safe }}&lt;&#x2F;code&gt;のような褒められたものではない指定をしている&lt;&#x2F;a&gt;のですが恐らく良くないので適当に良い方法を見繕ってください｡そして教えてください｡&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;css&quot;&gt;css&lt;&#x2F;h2&gt;
+&lt;p&gt;色を変数にしたかったのでsassにしましたが普通に作る分にはcssで良いと思います｡markdownをhtmlに変換したものが記事になるので&lt;code&gt;# h1&lt;&#x2F;code&gt;や&lt;code&gt;[リンク名](url)&lt;&#x2F;code&gt;を良い感じにcssで整える必要があります｡個人的には使う機能を予想して一気に作るよりは適宜作っていくほうが良いと感じています｡&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;depuroi&quot;&gt;デプロイ&lt;&#x2F;h1&gt;
+&lt;p&gt;今回は&lt;a href=&quot;https:&#x2F;&#x2F;docs.github.com&#x2F;ja&#x2F;pages&#x2F;getting-started-with-github-pages&#x2F;about-github-pages&quot;&gt;github pages&lt;&#x2F;a&gt;を使いました｡基本は&lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;deployment&#x2F;github-pages&#x2F;&quot;&gt;公式ドキュメント&lt;&#x2F;a&gt;に沿えば良いのですが知識不足と英語の苦手が故にまごついた部分があったのでメモしておくと&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;user icon&amp;gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;settings&#x2F;profile&quot;&gt;Settings&lt;&#x2F;a&gt;&amp;gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;settings&#x2F;apps&quot;&gt;Developer setting&lt;&#x2F;a&gt;&amp;gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;settings&#x2F;tokens&quot;&gt;Personal access tokens (classic)&lt;&#x2F;a&gt;にて Generate new token(classic) を行い public_repo のみに印を付け発行されたtokenをコピーする&lt;&#x2F;li&gt;
+&lt;li&gt;repositry&amp;gt;Settings&amp;gt;Secrets&amp;gt;ActionsにてNameにTOKENと書きSecretには先程コピーしたtokenをペーストする&lt;&#x2F;li&gt;
+&lt;li&gt;&#x2F;config.tomlをbase_url=&amp;quot;https:&#x2F;&#x2F;&#x27;user_name&#x27;.github.io&#x2F;&#x27;repository_name&#x27;&amp;quot;と書き換える&lt;&#x2F;li&gt;
+&lt;li&gt;git pushした後でrepositry&amp;gt;Settings&amp;gt;Pages&amp;gt;SourceがDeploy from a branchでありrepositry&amp;gt;Settings&amp;gt;Pages&amp;gt;Branchがgh-pages &#x2F;(root)になっている事を確認する&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;このような具合です｡&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;suo-gan&quot;&gt;所感&lt;&#x2F;h1&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;themes&#x2F;&quot;&gt;テーマ&lt;&#x2F;a&gt;が少ないのが&lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;&quot;&gt;zola&lt;&#x2F;a&gt;の最大の問題で次点で日本語の情報がほぼありません｡調べていないのでわかりませんが&lt;a href=&quot;https:&#x2F;&#x2F;gohugo.io&#x2F;&quot;&gt;hugo&lt;&#x2F;a&gt;なら自分で作らなくともタグ一覧を表示しカテゴリ分けが出来たのではないかなと思っています｡なので一切おすすめしません｡&lt;a href=&quot;https:&#x2F;&#x2F;www.rust-lang.org&#x2F;ja&quot;&gt;rust&lt;&#x2F;a&gt;だから早いとか言われていますが記事数が200程度なら変わらないと思います｡それでも&lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;&quot;&gt;zola&lt;&#x2F;a&gt;が使いたいなら&lt;a href=&quot;https:&#x2F;&#x2F;chat.openai.com&#x2F;chat&quot;&gt;chatgpt&lt;&#x2F;a&gt;の手を借りると良いと思います｡英語サイトの情報も内包していて適当な日本語で返してくれるので大体は解決します｡最新情報はbingのaiの方が良いのでしょうが適当なサイトから拾ってしまうために情報の質は&lt;a href=&quot;https:&#x2F;&#x2F;chat.openai.com&#x2F;chat&quot;&gt;chatgpt&lt;&#x2F;a&gt;の方が良い傾向にあると感じています｡&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;can-kao&quot;&gt;参考&lt;&#x2F;h1&gt;
+&lt;ul&gt;
+&lt;li&gt;zolaの書き方を知るために参照&lt;br &#x2F;&gt;
+&lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&quot;&gt;https:&#x2F;&#x2F;www.getzola.org&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;カテゴリのif文を教えてもらった&lt;br &#x2F;&gt;
+&lt;a href=&quot;https:&#x2F;&#x2F;chat.openai.com&#x2F;chat&quot;&gt;https:&#x2F;&#x2F;chat.openai.com&#x2F;chat&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;ブログデザインを参照&lt;br &#x2F;&gt;
+&lt;a href=&quot;http:&#x2F;&#x2F;saqum.com&#x2F;index.html&quot;&gt;http:&#x2F;&#x2F;saqum.com&#x2F;index.html&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;配色の参考&lt;br &#x2F;&gt;
+&lt;a href=&quot;https:&#x2F;&#x2F;pigment.shapefactory.co&#x2F;&quot;&gt;https:&#x2F;&#x2F;pigment.shapefactory.co&#x2F;&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;タグマークの作成に参照&lt;br &#x2F;&gt;
+&lt;a href=&quot;https:&#x2F;&#x2F;qiita.com&#x2F;yuneco&#x2F;items&#x2F;444abd3f40d53ce7d078&quot;&gt;https:&#x2F;&#x2F;qiita.com&#x2F;yuneco&#x2F;items&#x2F;444abd3f40d53ce7d078&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+	</entry>
+</feed>

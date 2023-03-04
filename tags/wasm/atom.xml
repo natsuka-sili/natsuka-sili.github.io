@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+	<title> - wasm</title>
+	<link href="https://natsuka-sili.github.io/tags/wasm/atom.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://natsuka-sili.github.io"/>
+	<generator uri="https://www.getzola.org/">Zola</generator>
+	<updated>2023-03-02T00:00:00+00:00</updated>
+	<id>https://natsuka-sili.github.io/tags/wasm/atom.xml</id>
+	<entry xml:lang="en">
+		<title>電界シミュレータをrust→wasmで改める</title>
+		<published>2023-03-02T00:00:00+00:00</published>
+		<updated>2023-03-02T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://natsuka-sili.github.io/post/t3-werve-rust/" type="text/html"/>
+		<id>https://natsuka-sili.github.io/post/t3-werve-rust/</id>
+		<content type="html">&lt;h1 id=&quot;xin-yi-qi&quot;&gt;心意気&lt;&#x2F;h1&gt;
+&lt;p&gt;卒業研究として&lt;a href=&quot;..&#x2F;post&#x2F;t2-werve-gpujs&quot;&gt;gpu.jsで電界シミュレータを作っている&lt;&#x2F;a&gt;間に&lt;a href=&quot;https:&#x2F;&#x2F;webassembly.org&quot;&gt;webassembly&lt;&#x2F;a&gt;というものを知ってしまいそれ以降はやる気が低下しきりながらもなんとか&lt;a href=&quot;https:&#x2F;&#x2F;gpu.rocks&#x2F;#&#x2F;&quot;&gt;gpu.js&lt;&#x2F;a&gt;で作り終わり時間も手に入れたのでいよいよ&lt;a href=&quot;https:&#x2F;&#x2F;webassembly.org&quot;&gt;webassembly&lt;&#x2F;a&gt;で作り始めました｡&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;zuo-tutamono&quot;&gt;作ったもの&lt;&#x2F;h1&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;natsuka-sili.github.io&#x2F;werve-wasm&#x2F;&quot;&gt;https:&#x2F;&#x2F;natsuka-sili.github.io&#x2F;werve-wasm&#x2F;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;ji-neng&quot;&gt;機能&lt;&#x2F;h2&gt;
+&lt;p&gt;黒い範囲をクリックすると白いぼやけた円が表示されるかと思います｡これはスライダーに応じたcharge valueの左ある数字の大きさに対応した電荷です｡このように電荷をいくつか置き輝度で電界を見て楽しめます｡また上にあるスイッチの説明を以下に示します｡&lt;&#x2F;p&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th style=&quot;text-align: right&quot;&gt;install&lt;&#x2F;th&gt;&lt;th&gt;:&lt;&#x2F;th&gt;&lt;th&gt;クリックするとchargeに合う値の電荷を置きます&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: right&quot;&gt;remove&lt;&#x2F;td&gt;&lt;td&gt;:&lt;&#x2F;td&gt;&lt;td&gt;電荷をクリックすると消すことができます&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: right&quot;&gt;control&lt;&#x2F;td&gt;&lt;td&gt;:&lt;&#x2F;td&gt;&lt;td&gt;電荷をドラッグアンドドロップで移動させられます&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: right&quot;&gt;fix&lt;&#x2F;td&gt;&lt;td&gt;:&lt;&#x2F;td&gt;&lt;td&gt;電荷をクリックすると固定できます&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
+&lt;h2 id=&quot;sosukodo&quot;&gt;ソースコード&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;natsuka-sili&#x2F;werve-wasm&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;natsuka-sili&#x2F;werve-wasm&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;基本的に&lt;code&gt;src&lt;&#x2F;code&gt;内の&lt;code&gt;.rs&lt;&#x2F;code&gt;ファイルを読んでもらえばシミュレーションについてわかるかと思います｡&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;chu-li&quot;&gt;処理&lt;&#x2F;h1&gt;
+&lt;ol&gt;
+&lt;li&gt;1つの電荷に対する電界の値を1539×1539で計算しテンプレートに格納する&lt;&#x2F;li&gt;
+&lt;li&gt;電荷の位置を元に電界のテンプレートを動かし配列769×769に格納する&lt;&#x2F;li&gt;
+&lt;li&gt;電荷の数だけ総和して配列769×769に格納していく&lt;&#x2F;li&gt;
+&lt;li&gt;電荷の座標に対応する電界配列の要素を電荷値と乗算してクーロン力を計算する&lt;&#x2F;li&gt;
+&lt;li&gt;クーロン力を元に位置と速度と加速度を計算する&lt;&#x2F;li&gt;
+&lt;li&gt;表示する&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;これの2.から6.を繰り返していると思ってください｡配列の大きさ769×769の理由はよく覚えていないのですが奇数の方が都合が良いというのは確かです｡&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;rust-wasm&quot;&gt;rust→wasm&lt;&#x2F;h2&gt;
+&lt;p&gt;入力と表示以外の全てを&lt;a href=&quot;https:&#x2F;&#x2F;www.rust-lang.org&#x2F;ja&quot;&gt;rust&lt;&#x2F;a&gt;から変換した&lt;a href=&quot;https:&#x2F;&#x2F;webassembly.org&quot;&gt;wasm&lt;&#x2F;a&gt;で実行しています｡&lt;a href=&quot;https:&#x2F;&#x2F;wgpu.rs&quot;&gt;wgpu&lt;&#x2F;a&gt;や&lt;a href=&quot;https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webgpu&#x2F;&quot;&gt;webgpu&lt;&#x2F;a&gt;は仕様が変わり続けているので使っていません｡表示に適すような配列への変換もこっちで行っています｡&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;canvas&quot;&gt;canvas&lt;&#x2F;h2&gt;
+&lt;p&gt;上述にある表示に適すような配列を共有メモリーから表示しています｡&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;natsuka-sili&#x2F;werve-gpujs&quot;&gt;gpu.js版&lt;&#x2F;a&gt;にあったベクトル表示を未だに作っていないためcanvasは1枚のみでの実装です｡&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;css&quot;&gt;css&lt;&#x2F;h2&gt;
+&lt;p&gt;何も無いのでスマートフォンから使おうとすると電荷を動かす時にスクロールされるなど使いにくいと思います｡pc(2060)では&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;natsuka-sili&#x2F;werve-wasm&quot;&gt;wasm版&lt;&#x2F;a&gt;の方がフレームレートが出たのですがスマートフォン(iphone8)では&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;natsuka-sili&#x2F;werve-gpujs&quot;&gt;gpu.js版&lt;&#x2F;a&gt;の方が出たのでcssを作る気が消えたと記憶しています｡しかしiphone11で試したところ&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;natsuka-sili&#x2F;werve-wasm&quot;&gt;wasm版&lt;&#x2F;a&gt;もかなり良く動いたのでやる気によってはcssやベクトル表示機能を作ると思います｡&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;depuroi&quot;&gt;デプロイ&lt;&#x2F;h1&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;webpack.js.org&#x2F;&quot;&gt;webpack&lt;&#x2F;a&gt;を用いてローカルで生成したものを&lt;a href=&quot;https:&#x2F;&#x2F;docs.github.com&#x2F;ja&#x2F;pages&#x2F;getting-started-with-github-pages&#x2F;about-github-pages&quot;&gt;github pages&lt;&#x2F;a&gt;で&lt;code&gt;&#x2F;docs&lt;&#x2F;code&gt;のデプロイしています｡&lt;&#x2F;p&gt;
+</content>
+	</entry>
+</feed>
